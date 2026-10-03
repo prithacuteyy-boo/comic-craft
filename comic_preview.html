@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Preview</title>
+</head>
+<body>
+
+    <h1>Comic Preview</h1>
+
+    <div>
+        <h2>Your Story</h2>
+        <p>{{ story }}</p>
+    </div>
+
+    {% if panels %}
+        {% for panel in panels %}
+            <div>
+                <h3>Panel {{ loop.index }}</h3>
+                <p>{{ panel }}</p>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <a href="/">Create Another Comic</a>
+
+</body>
+</html>
